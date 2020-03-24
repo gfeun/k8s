@@ -4,7 +4,7 @@
 - VM (droplets)
 - DNS A records
 
-[terraform-inventory](https://github.com/adammck/terraform-inventory) is used to create an ansible inventory from the terraform state file
+`terraform show` + `jq`-fu are used to build an ansible inventory from terraform state file
 
 [kubespray](https://github.com/kubernetes-sigs/kubespray) is used to install k8s
 
