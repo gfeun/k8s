@@ -1,0 +1,13 @@
+[kube-node:children]
+workers
+
+[k8s-cluster:children]
+controllers
+workers
+
+[etcd:children]
+controllers
+workers
+
+[kube-master:children]
+controllers

@@ -6,3 +6,5 @@
 - hosts: workers
   tasks:
     - ping:
+
+- import_playbook: kubespray/cluster.yml
