@@ -42,6 +42,7 @@ resource "digitalocean_record" "controllers" {
 
   domain = data.digitalocean_domain.k8s.name
   type   = "A"
+  ttl = 30
   name   = "controller-${count.index}"
   value  = digitalocean_droplet.controllers[count.index].ipv4_address
 }
@@ -51,6 +52,7 @@ resource "digitalocean_record" "workers" {
 
   domain = data.digitalocean_domain.k8s.name
   type   = "A"
+  ttl = 30
   name   = "worker-${count.index}"
   value  = digitalocean_droplet.workers[count.index].ipv4_address
 }
