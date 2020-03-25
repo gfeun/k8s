@@ -21,7 +21,7 @@ create_dynamic_inventory: create_infra
 
 .PHONY: install_k8s
 install_k8s: create_dynamic_inventory
-	ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i kubespray-inventory -u root --private-key ~/.ssh/id_rsa cluster_install.yml
+	ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook --flush-cache -i kubespray-inventory -u root --private-key ~/.ssh/id_rsa cluster_install.yml
 
 .PHONY: create_cluster
 create_cluster: create_infra create_dynamic_inventory install_k8s
